@@ -13,7 +13,7 @@ function App() {
   const [advice, setAdvice] = useState<String>();
 
   const getData = useCallback( async()=> {
-    await axios.get('https://api.adviceslip.com/advice')
+    await axios.get('https://swapi.py4e.com/api/people/7/')
     .then(function (response) {
      console.log(response.data);
      setAdvice(response.data.slip.advice);
